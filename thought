@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -eou pipefail
+
+cd ~/.local/share/thoughts
+
+now=$(date)
+rand=$(echo $now | sha256sum | cut -c -16)
+command vim $rand.txt
+thought=$(sed -z 's/\n/<br>\n/g' $rand.txt)
+thought=${thought%????}
+rm $rand.txt
+
+now=$(date)
+dateHash=$(echo $now | sha256sum | cut -c -16)
+blob="<p><a id="$dateHash" href="#$dateHash"><span style="font-weight:bold">
+$now
+</span></a><br>
+$thought
+</p>"
+
+echo "$blob" | cat - .rawthoughts.html > $dateHash.html && mv $dateHash.html .rawthoughts.html
+cat .head.html .rawthoughts.html | cat - .foot.html > thoughts.html
+echo "thought recorded :)"
