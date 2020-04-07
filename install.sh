@@ -6,7 +6,7 @@ binSpot=~/.local/bin/thought
 stuffSpot=~/.local/share/thoughts
 
 if [ -d $stuffSpot ]; then
-    echo "$stuffSpot already exists"
+    echo "$stuffSpot already exists" 1>&2
     exit 1
 fi
 
@@ -16,7 +16,7 @@ cp .foot.html $stuffSpot
 touch $stuffSpot/.rawthoughts.html
 
 if [ -f $binSpot ]; then
-    echo "$binSpot already exists"
+    echo "$binSpot already exists" 1>&2
     exit 1
 fi
 
