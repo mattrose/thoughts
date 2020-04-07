@@ -3,6 +3,7 @@
 set -eou pipefail
 
 cd ~/.local/share/thoughts
+git pull || true
 
 now=$(date)
 rand=$(echo $now | sha256sum | cut -c -16)
