@@ -17,7 +17,8 @@ blob="<p><a id="$dateHash" href="#$dateHash"><span style="font-weight:bold">
 $now
 </span></a><br>
 $thought
-</p>"
+</p>
+"
 
 echo "$blob" | cat - .rawthoughts.html > $dateHash.html && mv $dateHash.html .rawthoughts.html
 cat .head.html .rawthoughts.html | cat - .foot.html > thoughts.html
