@@ -19,7 +19,10 @@ $now
 $thought
 </p>
 "
-
+git pull
 echo "$blob" | cat - .rawthoughts.html > $dateHash.html && mv $dateHash.html .rawthoughts.html
 cat .head.html .rawthoughts.html | cat - .foot.html > thoughts.html
+git add .
+git commit -m "i had a thought"
+git push
 echo "thought recorded :)"
