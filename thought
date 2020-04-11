@@ -4,14 +4,14 @@ set -eou pipefail
 
 cd ~/.local/share/thoughts
 
-now=$(date +"%D %r")
+now=$(date)
 rand=$(echo $now | sha256sum | cut -c -16)
 command vim $rand.txt
 thought=$(sed -z 's/\n/<br>\n/g' $rand.txt)
 thought=${thought%????}
 rm $rand.txt
 
-now=$(date +"%D %r")
+now=$(date +"%A | %F | %r")
 dateHash=$(echo $now | sha256sum | cut -c -16)
 blob="<p><a id="$dateHash" href="#$dateHash"><span style="font-weight:bold">
 $now
