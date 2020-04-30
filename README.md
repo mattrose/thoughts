@@ -1,7 +1,7 @@
 
 # *thoughts*
 
-*"put your thoughts on the internet"*
+*"put your thoughts on the internet"*  
 [see it in action](https://thoughts.maren.hup.is)
 
 ## Install
