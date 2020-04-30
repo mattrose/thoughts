@@ -1,10 +1,10 @@
 
 # *thoughts*
 
-### "put your thoughts on the internet"
-You can see it in action at thoughts.maren.hup.is
+*"put your thoughts on the internet"*
+[see it in action](https://thoughts.maren.hup.is)
 
-
+## Install
 Install from any reasonable location with `./install.sh`
 
 I can't make any promises about that install script! (maybe one day)
