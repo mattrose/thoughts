@@ -1,7 +1,9 @@
 
 # *thoughts*
 
-"put your thoughts on the internet"
+### "put your thoughts on the internet"
+You can see it in action at thoughts.maren.hup.is
+
 
 Install from any reasonable location with `./install.sh`
 
