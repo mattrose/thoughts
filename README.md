@@ -1,8 +1,6 @@
 
-# *thoughts*
-
-*"put your thoughts on the internet"*  
-[see it in action](https://thoughts.maren.hup.is)
+# *"put your thoughts on the internet"* 
+[Look at it](https://thoughts.maren.hup.is)
 
 ## Install
 Install from any reasonable location with `./install.sh`
