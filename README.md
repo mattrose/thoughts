@@ -12,8 +12,11 @@ Currently you have to have GNU sed on your system or it won't work, or maybe it'
 Finally, thoughts' installer isn't currently able to handle the *I'm already using thoughts on another computer and now I want to install it on a second computer and point it at the same repo* case. such a setup is manual, but not very hard.
 
 First install (you aren't already using thoughts on another machine):
-* install
-* create a repo in ~/.local/share/thoughts and point it at a remote origin
+* install with `./install.sh`
+* create a repo in ~/.local/share/thoughts and point it at a remote origin. Also do:
+  * `$ git add .`
+  * `$ git commit -m "init"`
+  * `$ git push`
 * from anywhere, type `thought`
 * enter your thought (currently you have to use vim sorry it's hardcoded maybe one day I'll fix that)
 * save and exit
