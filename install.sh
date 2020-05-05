@@ -2,7 +2,7 @@
 
 set -eou pipefail
 
-read -p "This install script is a bit broken if you are using ~thoughts~ on two machines. Press ENTER to continue"
+read -p "This install script is a bit funky if you're using ~thoughts~ on two machines. Be sure and check the README first. Press ENTER to continue"
 
 binSpot=~/.local/bin/thought
 stuffSpot=~/.local/share/thoughts
