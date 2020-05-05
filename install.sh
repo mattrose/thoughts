@@ -16,6 +16,11 @@ mkdir $stuffSpot
 cp .head.html $stuffSpot
 cp .foot.html $stuffSpot
 touch $stuffSpot/.rawthoughts.html
+echo '*' > $stuffSpot/.gitignore
+echo '!thoughts.html' >> $stuffSpot/.gitignore
+echo '!.gitignore' >> $stuffSpot/.gitignore
+echo '!.rawthoughts.html' >> $stuffSpot/.gitignore
+
 
 if [ -f $binSpot ]; then
     echo "$binSpot already exists" 1>&2
@@ -25,4 +30,4 @@ fi
 cp thought $binSpot
 chmod +x $binSpot
 
-echo 'Check to be sure ~/.local/bin is in your PATH, otherwise -- done!'
+echo 'Check to be sure ~/.local/bin is in your PATH, otherwise you're all good!'
