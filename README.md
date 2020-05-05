@@ -13,7 +13,7 @@ Finally, thoughts' installer isn't currently able to handle the *I'm already usi
 
 First install (you aren't already using thoughts on another machine):
 * install with `./install.sh`
-* create a repo in ~/.local/share/thoughts and point it at a remote origin. Also do:
+* create a repo in ~/.local/share/thoughts and point it at an empty remote origin. Also do:
   * `$ git add .`
   * `$ git commit -m "init"`
   * `$ git push`
