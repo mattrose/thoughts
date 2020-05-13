@@ -30,4 +30,4 @@ fi
 cp thought $binSpot
 chmod +x $binSpot
 
-echo 'Check to be sure ~/.local/bin is in your PATH, otherwise you're all good!'
+echo 'Check to be sure ~/.local/bin is in your PATH, otherwise -- all good!'
