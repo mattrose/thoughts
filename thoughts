@@ -27,6 +27,6 @@ git pull
 echo "$blob" | cat - .rawthoughts.html > $dateHash.html && mv $dateHash.html .rawthoughts.html
 cat .head.html .rawthoughts.html | cat - .foot.html > thoughts.html
 git add .
-git commit -m "i had a thought"
+git commit -m "add thoughts"
 git push
-echo "thought shared :)"
+echo "your thoughts have been shared :)"
