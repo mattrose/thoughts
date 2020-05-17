@@ -36,8 +36,7 @@ Installing on a second computer:
 * Copy **all** of its contents into ~/.local/share/thoughts, overwriting any existing files with the same names
 * Use ~thoughts~ as usual
 
-*A note about formatting your thoughts*
-
+*A note about formatting your thoughts* 
 Newlines are converted into `<br>` in all cases. So intentionally spaced out paragraphs are respected, but
 ```
 if
