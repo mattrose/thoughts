@@ -17,7 +17,7 @@
 ## Install
 Install from any reasonable location with `./install.sh`. The install script is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source. Currently GNU sed is required (thoughts won't work on Mac).
 
-~thoughts~ can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
+*thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
 
 First install (you aren't already using thoughts on another computer):
 * install with `./install.sh`
