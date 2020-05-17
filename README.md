@@ -64,6 +64,8 @@ this
     * Triple backtick codeblocks (no syntax highlighting)
     * `**bold**` and `*italic*`
     * Headings?
+  * Edit/delete previous thoughts
+  * Preview thoughts
 * Prayers
   * Post from mobile
 
