@@ -33,7 +33,7 @@ First install (you aren't already using thoughts on another computer):
 Installing on a second computer:
 * Install with `./install.sh`
 * Somewhere else, clone the remote repo you've been using to store your thoughts
-* Copy all of its contents into ~/.local/share/thoughts, overwriting any existing files with the same names
+* Copy all of its contents into `~/.local/share/thoughts`, overwriting any existing files with the same names
 * Use *thoughts* as usual
 
 *A note about formatting your thoughts*  
