@@ -22,7 +22,8 @@ Install from any reasonable location with `./install.sh`. The install script is 
 First install (you aren't already using thoughts on another computer):
 * install with `./install.sh`
 * add `~/.local/bin` to your PATH
-* create a repo in ~/.local/share/thoughts and point it at an empty remote origin. Then:
+* create a repo in `~/.local/share/thoughts` and point it at an empty remote origin
+* Be sure it's working:
   * `cd ~/.local/share/thoughts`
   * `$ git add .`
   * `$ git commit -m "init"`
