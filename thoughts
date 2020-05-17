@@ -11,7 +11,7 @@ if [ ! -f $rand.txt ]; then
     echo "you don't always have to share your thoughts :)"
     exit
 fi
-thought=$(sed -z 's/\n/<br>\n/g' $rand.txt)
+thought=$(sed 's/$/<br>/' $rand.txt)
 thought=${thought%????}
 rm $rand.txt
 
