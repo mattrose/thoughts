@@ -61,7 +61,7 @@ this
   * Add `thoughts help`
 * Dreams
   * Support a small subset of markdown (without introducing new dependencies or writing a parser)
-    * Unordered lists (no nesting)
+    * Nested, unordered lists
     * Single backticks for inline code
     * Triple backtick codeblocks (no syntax highlighting)
     * `**bold**` and `*italic*`
