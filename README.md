@@ -33,8 +33,8 @@ First install (you aren't already using thoughts on another computer):
 Installing on a second computer:
 * Install with `./install.sh`
 * Somewhere else, clone the remote repo you've been using to store your thoughts
-* Copy **all** of its contents into ~/.local/share/thoughts, overwriting any existing files with the same names
-* Use ~thoughts~ as usual
+* Copy all of its contents into ~/.local/share/thoughts, overwriting any existing files with the same names
+* Use *thoughts* as usual
 
 *A note about formatting your thoughts*  
 Newlines are converted into `<br>` in all cases. So intentionally spaced out paragraphs are respected, but
@@ -60,7 +60,7 @@ this
 * Dreams
   * Support a small subset of markdown (without introducing new dependencies or writing a parser)
     * Unordered lists (no nesting)
-    * ``backticks`` for inline code
+    * Single backticks for inline code
     * Triple backtick codeblocks (no syntax highlighting)
     * `**bold**` and `*italic*`
     * Headings?
