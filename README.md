@@ -12,6 +12,7 @@
 * Bash
 * GNU coreutils
 * Git
+* Vim
 
 ## Install
 Install from any reasonable location with `./install.sh`. The install script is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source. Currently GNU sed is required (thoughts won't work on Mac).
