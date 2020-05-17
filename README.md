@@ -3,7 +3,7 @@
 [Check it out!](https://thoughts.maren.hup.is)
 
 ## How it works
-* Type `thought` in a terminal
+* Type `thoughts` in a terminal
 * Vim opens. Type your thought and then `:wq`
 * *thoughts* outputs a single, self-contained HTML document with your thought appended. The thought is timestamped and the timestamp is linkified.
 * *thoughts* pushes your updated `thoughts.html` to github. It's up to you to get it on a server.
@@ -19,7 +19,7 @@ Install from any reasonable location with `./install.sh`. The install script is 
 
 *thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
 
-First install (you aren't already using thoughts on another computer):
+First install (you aren't already using *thoughts* on another computer):
 * Install with `./install.sh`
 * Add `~/.local/bin` to your PATH
 * Create a repo in `~/.local/share/thoughts` and point it at an empty remote origin
@@ -28,7 +28,7 @@ First install (you aren't already using thoughts on another computer):
   * `$ git add .`
   * `$ git commit -m "init"`
   * `$ git push`
-* From anywhere, type `thought`
+* From anywhere, type `thoughts`
 
 Installing on a second computer:
 * Install with `./install.sh`
@@ -57,6 +57,8 @@ this
 * Hopes
   * Automatically linkify URLs
   * Support basic user congifuration in a `thoughts.conf`
+  * Add `thoughts update`
+  * Add `thoughts help`
 * Dreams
   * Support a small subset of markdown (without introducing new dependencies or writing a parser)
     * Unordered lists (no nesting)
