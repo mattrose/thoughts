@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -eou pipefail
+set -euf pipefail
 
 printf "This install script is incomplete if you're using thoughts on two computers. Be sure and check the README first. Press ENTER to continue"
 read -r
