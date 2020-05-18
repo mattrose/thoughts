@@ -2,6 +2,8 @@
 [Check it out!](https://thoughts.maren.hup.is)
 
 ## How it works
+*thoughts is a work in progress! The install process is brittle and prone to requiring manual intervention. One day this will change, but until then know that it's at least quite simple, and once it's working you shouldn't have to futz with it*
+
 * Type `thoughts` in a terminal
 * Your preferred editor opens. Type your thought and then save and quit
 * *thoughts* outputs a single, self-contained HTML document with your thought appended. The thought is timestamped and the timestamp is linkified.
@@ -71,11 +73,8 @@ this
     * Nested, unordered lists
     * Single backticks for inline code
     * Triple backtick codeblocks (no syntax highlighting)
-    * `**bold**` and `*italic*`
-    * Headings?
+    * `**bold**`, `*italic*`, and `***bold italic***`
   * Edit/delete previous thoughts
   * Preview thoughts
-* Prayers
-  * Post from mobile
 
 <3
