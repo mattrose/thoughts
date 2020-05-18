@@ -9,26 +9,26 @@ rand=$(date | cksum | tr -d ' ')
 # You could just change this to nano if you'd like
 # I'm not sure it'll work if you try and use a graphical
 # editor like vscode or gedit
-command vim $rand.txt
+command vim "$rand".txt
 
-if [ ! -f $rand.txt ]; then
+if [ ! -f "$rand".txt ]; then
     echo "you don't always have to share your thoughts :)"
     exit
 fi
-thought=$(sed 's/$/<br>/' $rand.txt)
+thought=$(sed 's/$/<br>/' "$rand".txt)
 thought=${thought%????}
-rm $rand.txt
+rm "$rand".txt
 
 now=$(date +"%r | %Y-%m-%d")
 dateHash=$(date | cksum | tr -d ' ')
-blob="<p><a id="$dateHash" href="#$dateHash"><span style="font-weight:bold">
+blob="<p><a id=$dateHash href=#$dateHash><span style=font-weight:bold>
 $now
 </span></a><br>
 $thought
 </p>
 "
 git pull
-echo "$blob" | cat - .rawthoughts.html > $dateHash.html && mv $dateHash.html .rawthoughts.html
+echo "$blob" | cat - .rawthoughts.html > "$dateHash".html && mv "$dateHash".html .rawthoughts.html
 cat .head.html .rawthoughts.html | cat - .foot.html > thoughts.html
 git add .
 git commit -m "add thoughts"
