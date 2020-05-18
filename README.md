@@ -3,17 +3,16 @@
 
 ## How it works
 * Type `thoughts` in a terminal
-* Vim opens. Type your thought and then `:wq`
+* Your preferred editor opens. Type your thought and then save and quit
 * *thoughts* outputs a single, self-contained HTML document with your thought appended. The thought is timestamped and the timestamp is linkified.
 * *thoughts* pushes your updated `thoughts.html` to github. It's up to you to get it on a server.
 
 ## Requirements
-* Bash
+* any POSIX shell
 * POSIX coreutils
 * Git
-* Vim
 
-*Note:  Portability is a major priority. thoughts avoids non-POSIX flags in coreutils invocations, so should run anywhere with Bash, Vim, and Git. Eventually sh will replace Bash, and Vim won't be required.*
+*Note:  Portability is a major priority. Please open an issue if you experience any incorrect behavior on your system.
 
 ## Install
 Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.
@@ -56,9 +55,12 @@ this
 
 ### Future
 * Plans
-  * ~Use POSIX coreutils so it can run on Mac~ **done!**
-  * Use sh rather than bash
-  * Source editor from environment
+  * ~Use POSIX coreutils so it can run on Mac/BSD/etc.~
+    * Done!
+  * ~Use sh rather than bash~
+    * Done! Shell is sourced with `/usr/bin/env sh`
+  * ~Source editor from environment~
+    * Done! *thoughts* will use your preferred editor or fall back to `vi`
 * Hopes
   * Automatically linkify URLs
   * Support basic user congifuration in a `thoughts.conf`
