@@ -13,10 +13,12 @@
 * Git
 * Vim
 
+*Note:  Portability is a major priority. thoughts avoids non-POSIX flags in coreutils invocations, so should run anywhere with Bash, Vim, and Git. Eventually sh will replace Bash, and Vim won't be required.
+
 ## Install
 Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.
 
-Install from any reasonable location with `./install.sh`. The install script is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source. Currently GNU sed is required (*thoughts* won't work on Mac).
+Install from any reasonable location with `./install.sh`. The install script is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
 
 *thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
 
