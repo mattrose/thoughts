@@ -13,7 +13,7 @@
 * Git
 * Vim
 
-*Note:  Portability is a major priority. thoughts avoids non-POSIX flags in coreutils invocations, so should run anywhere with Bash, Vim, and Git. Eventually sh will replace Bash, and Vim won't be required.
+*Note:  Portability is a major priority. thoughts avoids non-POSIX flags in coreutils invocations, so should run anywhere with Bash, Vim, and Git. Eventually sh will replace Bash, and Vim won't be required.*
 
 ## Install
 Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.
