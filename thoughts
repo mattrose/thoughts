@@ -14,7 +14,7 @@ thought=$(sed 's/$/<br>/' $rand.txt)
 thought=${thought%????}
 rm $rand.txt
 
-now=$(date +"%r | %F")
+now=$(date +"%r | %Y-%m-%d")
 dateHash=$(date | cksum | tr -d ' ')
 blob="<p><a id="$dateHash" href="#$dateHash"><span style="font-weight:bold">
 $now
