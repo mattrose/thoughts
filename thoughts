@@ -5,7 +5,12 @@ set -eou pipefail
 cd ~/.local/share/thoughts
 
 rand=$(date | cksum | tr -d ' ')
+
+# You could just change this to nano if you'd like
+# I'm not sure it'll work if you try and use a graphical
+# editor like vscode or gedit
 command vim $rand.txt
+
 if [ ! -f $rand.txt ]; then
     echo "you don't always have to share your thoughts :)"
     exit
