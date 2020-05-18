@@ -4,8 +4,7 @@ set -eou pipefail
 
 cd ~/.local/share/thoughts
 
-now=$(date)
-rand=$(echo $now | sha256sum | cut -c -16)
+rand=$(date | cksum | tr -d ' ')
 command vim $rand.txt
 if [ ! -f $rand.txt ]; then
     echo "you don't always have to share your thoughts :)"
@@ -15,8 +14,8 @@ thought=$(sed 's/$/<br>/' $rand.txt)
 thought=${thought%????}
 rm $rand.txt
 
-now=$(date +"%A | %F | %r")
-dateHash=$(echo $now | sha256sum | cut -c -16)
+now=$(date +"%r | %F")
+dateHash=$(date | cksum | tr -d ' ')
 blob="<p><a id="$dateHash" href="#$dateHash"><span style="font-weight:bold">
 $now
 </span></a><br>
