@@ -12,7 +12,7 @@ if [ -d $stuffSpot ]; then
     exit 1
 fi
 
-mkdir $stuffSpot
+mkdir -p $stuffSpot
 cp .head.html $stuffSpot
 cp .foot.html $stuffSpot
 touch $stuffSpot/.rawthoughts.html
