@@ -1,5 +1,4 @@
-
-# *"put your thoughts on the internet"* 
+# *put your thoughts on the internet* 
 [Check it out!](https://thoughts.maren.hup.is)
 
 ## How it works
@@ -10,7 +9,7 @@
 
 ## Requirements
 * Bash
-* GNU coreutils
+* POSIX coreutils
 * Git
 * Vim
 
@@ -55,7 +54,9 @@ this
 
 ### Future
 * Plans
-  * Use POSIX coreutils so it can run on Mac
+  * ~Use POSIX coreutils so it can run on Mac~ **done!**
+  * Use sh rather than bash
+  * Source editor from environment
 * Hopes
   * Automatically linkify URLs
   * Support basic user congifuration in a `thoughts.conf`
