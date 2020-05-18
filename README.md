@@ -12,10 +12,10 @@
 * POSIX coreutils
 * Git
 
-*Note:  Portability is a major priority. Please open an issue if you experience any incorrect behavior on your system.
+*Note:  Portability is a major priority. Please open an issue if you experience any incorrect behavior on your system.*
 
 ## Install
-Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.
+*Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.*
 
 Install from any reasonable location with `./install.sh`. The install script is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
 
@@ -38,7 +38,7 @@ Installing on a second computer:
 * Copy all of its contents into `~/.local/share/thoughts`, overwriting any existing files with the same names
 * Use *thoughts* as usual
 
-*A note about formatting your thoughts*  
+*A note about formatting your thoughts:*  
 Newlines are converted into `<br>` in all cases. So intentionally spaced out paragraphs are respected, but
 ```
 if
