@@ -19,7 +19,7 @@
 ## Install
 *Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.*
 
-Install from any reasonable location with `./install.sh`. The installer is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
+Install from anywhere in `~/` with `./install.sh`. The installer is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
 
 *thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
 
