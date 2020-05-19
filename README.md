@@ -28,7 +28,7 @@ Install from anywhere in `~/` with `./install.sh`. The installer is brittle, but
 * Add `~/.local/bin` to your PATH
 * Create a repo in `~/.local/share/thoughts` and point it at an empty remote origin
 * Be sure it's working:
-  * `cd ~/.local/share/thoughts`
+  * `$ cd ~/.local/share/thoughts`
   * `$ git add .`
   * `$ git commit -m "init"`
   * `$ git push`
