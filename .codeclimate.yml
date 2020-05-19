@@ -1,0 +1,7 @@
+plugins:
+  shellcheck:
+    enabled: true
+exclude_patterns:
+  - "*"
+  - "!thoughts"
+  - "!install.sh"

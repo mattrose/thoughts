@@ -3,7 +3,7 @@
 set -euf pipefail
 
 printf "This install script is incomplete if you're using thoughts on two computers. Be sure and check the README first. Press ENTER to continue"
-read -r temp
+read -r notused
 
 binSpot=~/.local/bin/thoughts
 stuffSpot=~/.local/share/thoughts
