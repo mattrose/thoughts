@@ -19,7 +19,7 @@ thought=$(sed 's/$/<br>/' "$rand".txt)
 thought=${thought%????}
 rm "$rand".txt
 
-now=$(date +"%r | %Y-%m-%d")
+now=$(date +"%I:%M %p | %Y-%m-%d")
 dateHash=$(date | cksum | tr -d ' ')
 blob="<p><a class=\"thought\" id=$dateHash href=#$dateHash>
 $now</a><br>
