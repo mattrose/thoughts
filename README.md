@@ -2,7 +2,7 @@
 [Check it out!](https://thoughts.maren.hup.is)
 
 ## How it works
-*thoughts is a work in progress! The installer is brittle and prone to requiring manual intervention. One day this will change, but until then know that it's at least quite simple, and once it's working you shouldn't have to futz with it*
+*thoughts is a work in progress! The installer is brittle and prone to requiring manual intervention. One day this will change, but until then just know that at least it's simple, and once it's working you shouldn't have to futz with it.*
 
 * Type `thoughts` in a terminal
 * Your preferred editor opens. Type your thought and then save and quit
