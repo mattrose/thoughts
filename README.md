@@ -63,10 +63,11 @@ this
     * Done! Shell is sourced with `/usr/bin/env sh`
   * ~Source editor from environment~
     * Done! *thoughts* will use your preferred editor or fall back to `vi`
+  * Improve installer
+  * Add `thoughts update`
 * Hopes
   * Automatically linkify URLs
   * Support basic user congifuration in a `thoughts.conf`
-  * Add `thoughts update`
   * Add `thoughts help`
 * Dreams
   * Support a small subset of markdown (without introducing new dependencies or writing a parser)
