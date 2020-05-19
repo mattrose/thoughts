@@ -21,7 +21,7 @@ rm "$rand".txt
 
 now=$(date +"%r | %Y-%m-%d")
 dateHash=$(date | cksum | tr -d ' ')
-blob="<p><a id=$dateHash href=#$dateHash>
+blob="<p><a class=\"thought\" id=$dateHash href=#$dateHash>
 $now</a><br>
 $thought
 </p>
