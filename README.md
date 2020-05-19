@@ -36,7 +36,7 @@ Install from anywhere in `~/` with `./install.sh`. The installer is brittle, but
 
 **Installing on a second computer:**
 * Install with `./install.sh`
-* Somewhere else, clone the remote repo you've been using to store your thoughts
+* `cd`, and clone the remote repo you've been using to store your thoughts
 * Copy all of its contents into `~/.local/share/thoughts`, overwriting any existing files with the same names
 * Use *thoughts* as usual
 
