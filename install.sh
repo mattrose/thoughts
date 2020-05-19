@@ -5,30 +5,35 @@ set -euf pipefail
 printf "This install script is incomplete if you're using thoughts on two computers. Be sure and check the README first. Press ENTER to continue"
 read -r notused
 
-binSpot=~/.local/bin/thoughts
-stuffSpot=~/.local/share/thoughts
+binDir=$HOME/.local/bin
+stuffDir=$HOME/.local/share/thoughts
 
-if [ -d $stuffSpot ]; then
-    echo "$stuffSpot already exists" 1>&2
+if [ -d $stuffDir ]; then
+    printf "Thoughts is already installed. Delete everything and reinstall? [y/n]: "
+    read -r reply
+    if [ ! "$reply" = "y" ]; then
+        echo "OK, nothing's been installed."
+        exit 0
+    fi
+fi
+
+mkdir -p $stuffDir
+cp .head.html $stuffDir
+cp .foot.html $stuffDir
+touch $stuffDir/.rawthoughts.html
+echo '*' > $stuffDir/.gitignore
+echo '!thoughts.html' >> $stuffDir/.gitignore
+echo '!.gitignore' >> $stuffDir/.gitignore
+echo '!.rawthoughts.html' >> $stuffDir/.gitignore
+
+
+if [ -f $binDir ]; then
+    echo "$binDir already exists" 1>&2
     exit 1
 fi
 
-mkdir -p $stuffSpot
-cp .head.html $stuffSpot
-cp .foot.html $stuffSpot
-touch $stuffSpot/.rawthoughts.html
-echo '*' > $stuffSpot/.gitignore
-echo '!thoughts.html' >> $stuffSpot/.gitignore
-echo '!.gitignore' >> $stuffSpot/.gitignore
-echo '!.rawthoughts.html' >> $stuffSpot/.gitignore
+cp thoughts $binDir
+chmod +x $binDir/thoughts
 
-
-if [ -f $binSpot ]; then
-    echo "$binSpot already exists" 1>&2
-    exit 1
-fi
-
-cp thoughts $binSpot
-chmod +x $binSpot
-
-echo 'Check to be sure ~/.local/bin is in your PATH, otherwise -- all good!'
+echo 'Done! Check to be sure $HOME/.local/bin is in your PATH.'
+exit 0
