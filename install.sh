@@ -2,9 +2,6 @@
 
 set -euf pipefail
 
-printf "This install script is incomplete if you're using thoughts on two computers. Be sure and check the README first. Press ENTER to continue"
-read -r notused
-
 binDir=$HOME/.local/bin
 stuffDir=$HOME/.local/share/thoughts
 
@@ -15,6 +12,7 @@ if [ -d $stuffDir ]; then
         echo "OK, nothing's been installed."
         exit 0
     fi
+    torch=true
 fi
 
 mkdir -p $stuffDir
@@ -35,5 +33,5 @@ fi
 cp thoughts $binDir
 chmod +x $binDir/thoughts
 
-echo 'Done! Check to be sure $HOME/.local/bin is in your PATH.'
+echo 'Done! Add $HOME/.local/bin to your PATH.'
 exit 0
