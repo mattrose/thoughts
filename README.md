@@ -2,7 +2,7 @@
 [Check it out!](https://thoughts.maren.hup.is)
 
 ## How it works
-*thoughts is a work in progress! The install process is brittle and prone to requiring manual intervention. One day this will change, but until then know that it's at least quite simple, and once it's working you shouldn't have to futz with it*
+*thoughts is a work in progress! The installer is brittle and prone to requiring manual intervention. One day this will change, but until then know that it's at least quite simple, and once it's working you shouldn't have to futz with it*
 
 * Type `thoughts` in a terminal
 * Your preferred editor opens. Type your thought and then save and quit
@@ -14,12 +14,12 @@
 * POSIX coreutils
 * Git
 
-*Note:  Portability is a major priority. Please open an issue if you experience any incorrect behavior on your system.*
+*Note:  Portability is the primary priority. Please open an issue if you experience any incorrect behavior on your system.*
 
 ## Install
 *Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.*
 
-Install from any reasonable location with `./install.sh`. The install script is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
+Install from any reasonable location with `./install.sh`. The installer is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
 
 *thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
 
