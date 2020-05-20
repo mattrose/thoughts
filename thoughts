@@ -4,15 +4,23 @@ set -euf pipefail
 
 cd ~/.local/share/thoughts
 
+# get an editor so we can type our thought.
+# generate a random temp filename to avoid collisions.
+# who knows what's in there!
 rand=$(date | cksum | tr -d ' ')
 "${EDITOR:-vi}" "$rand".txt
 if [ ! -f "$rand".txt ]; then
     echo "you don't always have to share your thoughts :)"
-    exit
+    exit 0
 fi
+# If this thought doesn't have a trailing newline, add one
+tail -c 1 < "$rand".txt | read -r _ || echo >> "$rand".txt
 
-thought=$(sed 's/$/<br>/' "$rand".txt)
-thought=${thought%????}
+# replace all newlines with <br>
+# since we know EOF is a newline, remove the last four characters
+sed 's/$/<br>/' "$rand".txt > temp.txt
+mv temp.txt "$rand".txt
+thought=$(sed '$ s/.\{4\}$//' "$rand".txt)
 rm "$rand".txt
 
 now=$(date +"%I:%M %p | %Y-%m-%d")
