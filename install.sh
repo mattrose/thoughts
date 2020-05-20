@@ -6,7 +6,7 @@ binDir=$HOME/.local/bin
 stuffDir=$HOME/.local/share/thoughts
 
 if [ -d "$stuffDir" ]; then
-    printf "Thoughts is already installed. Delete everything and reinstall? [y/n]: "
+    printf "Thoughts is already installed. Reinstall? [y/n]: "
     read -r reply
     if [ ! "$reply" = "y" ]; then
         echo "OK, nothing's been installed."
