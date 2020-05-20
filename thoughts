@@ -17,7 +17,7 @@ fi
 tail -c 1 < "$rand".txt | read -r _ || echo >> "$rand".txt
 
 # replace all newlines with <br>
-# since we know EOF is a newline, remove the last four characters
+# and then remove the final <br>
 sed 's/$/<br>/' "$rand".txt > temp.txt
 mv temp.txt "$rand".txt
 thought=$(sed '$ s/.\{4\}$//' "$rand".txt)
