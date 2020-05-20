@@ -23,7 +23,8 @@ Install from anywhere in `~/` with `./install.sh`. The installer is brittle, but
 
 *thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
 
-### First install (you aren't already using *thoughts* on another computer):
+### First install:
+*(Do this if you aren't already using thoughts on another computer)
 * Install with `./install.sh`
 * Add `~/.local/bin` to your PATH
 * Create a repo in `~/.local/share/thoughts` and point it at an empty remote origin
