@@ -16,7 +16,7 @@
 
 *Note:  Portability is the primary priority. Please open an issue if you experience any incorrect behavior on your system.*
 
-## Install
+## Installing
 *Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.*
 
 Install from anywhere in `~/` with `./install.sh`. The installer is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
