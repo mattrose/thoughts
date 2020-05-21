@@ -1,4 +1,4 @@
-# *put your thoughts on the internet* 
+# *thoughts* 
 [Check it out!](https://thoughts.maren.hup.is)
 
 ## How it works
