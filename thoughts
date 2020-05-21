@@ -1,8 +1,19 @@
 #!/usr/bin/env sh
-
+cmd="$1"
 set -euf pipefail
-
 cd ~/.local/share/thoughts
+
+if [ "$cmd" = "update" ]; then
+    git clone https://github.com/marenbeam/thoughts.git thoughts-temp
+    cd thoughts-temp
+    tag=$(git tag -l | tail -1)
+    git checkout tags/"$tag"
+    cd ..
+    cp -r thoughts-temp/. "$HOME"/.local/share/thoughts
+    mv "$HOME"/.local/share/thoughts/thoughts "$HOME"/.local/bin
+    echo "Done."
+    exit 0
+fi
 
 # get an editor so we can type our thought.
 # generate a random temp filename to avoid collisions.
