@@ -25,7 +25,7 @@ Install from anywhere with `./install.sh`.
 *(Do this if you aren't already using thoughts on another computer)*
 * Install with `./install.sh`
 * Add `~/.local/bin` to your PATH
-* Create a git repository in `~/.local/share/thoughts` and point it at an empty remote origin
+* Use `git init` to create a git repository in `~/.local/share/thoughts`, then point it at an empty remote origin
 * Be sure it's working:
   * `$ cd ~/.local/share/thoughts`
   * `$ git add .`
@@ -33,9 +33,9 @@ Install from anywhere with `./install.sh`.
   * `$ git push`
 * From anywhere, type `thoughts`
 
+### Installing on another computer:
 *thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`.
 
-### Installing on another computer:
 * Install with `./install.sh another`
 * Follow the prompts
 
