@@ -39,7 +39,7 @@ rm "$rand".txt
 
 now=$(date +"%I:%M %p | %Y-%m-%d")
 dateHash=$(date | cksum | tr -d ' ')
-blob="<p><a class=\"thought\" id=\"$dateHash\" href=\"#$dateHash\">
+blob="<p class=\"thought\"><a class=\"thought-date\" id=\"$dateHash\" href=\"#$dateHash\">
 $now</a><br>
 $thought
 </p>
