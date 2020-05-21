@@ -1,30 +1,64 @@
 #!/usr/bin/env sh
 cmd="$1"
 set -euf pipefail
-cd ~/.local/share/thoughts
+stuffDir=$HOME/.local/share/thoughts
 
+# "update" command
 if [ "$cmd" = "update" ]; then
-    git clone https://github.com/marenbeam/thoughts.git thoughts-temp
-    cd thoughts-temp
+    git clone https://github.com/marenbeam/thoughts.git "$stuffDir"/thoughts-temp
+    cd "$stuffDir"/thoughts-temp
     tag=$(git tag -l | tail -1)
     git checkout tags/"$tag"
-    cd ..
-    cp thoughts-temp/.head.html "$HOME"/.local/share/thoughts
-    cp thoughts-temp/.foot.html "$HOME"/.local/share/thoughts
-    cp thoughts-temp/README.md "$HOME"/.local/share/thoughts
-    cp thoughts-temp/thoughts "$HOME"/.local/bin
-    rm -rf thoughts-temp
-    echo "Done."
+    cp "$stuffDir"/thoughts-temp/.head.html "$stuffDir"
+    cp "$stuffDir"/thoughts-temp/.foot.html "$stuffDir"
+    cp "$stuffDir"/thoughts-temp/README.md "$stuffDir"
+    cp "$stuffDir"/thoughts-temp/thoughts "$stuffDir"
+    rm -rf "$stuffDir"/thoughts-temp
+    echo
+    echo "Done!"
     exit 0
 fi
 
+# "edit" command
+if [ "$cmd" = "edit" ]; then
+    cd "$stuffDir"
+    git pull
+    "${EDITOR:-vi}" .rawthoughts.html
+    cat .head.html .rawthoughts.html | cat - .foot.html > thoughts.html
+    git add .
+    git commit -m "update thoughts"
+    git push
+    echo
+    echo "your thoughts have been updated"
+    exit 0
+fi
+
+# "help" command
+if [ "$cmd" = "help" ]; then
+    echo '$ thoughts'
+    echo '  --Share your thoughts'
+    echo
+    echo '$ thoughts update'
+    echo '  --Download and install the latest tagged release'
+    echo
+    echo '$ thoughts edit'
+    echo '  --Edit your previously posted thoughts'
+    echo
+    echo "If you need to do some manual intervention,"
+    echo "thoughts data lives in $HOME/.local/share/thoughts"
+    echo "and the program is installed in $HOME/.local/bin"
+    exit 0
+fi
+
+cd ~/.local/share/thoughts
 # get an editor so we can type our thought.
 # generate a random temp filename to avoid collisions.
 # who knows what's in there!
 rand=$(date | cksum | tr -d ' ')
 "${EDITOR:-vi}" "$rand".txt
 if [ ! -f "$rand".txt ]; then
-    echo "you don't always have to share your thoughts :)"
+    echo
+    echo "you don't always have to share your thoughts"
     exit 0
 fi
 # If this thought doesn't have a trailing newline, add one
@@ -48,6 +82,7 @@ git pull
 echo "$blob" | cat - .rawthoughts.html > "$dateHash".html && mv "$dateHash".html .rawthoughts.html
 cat .head.html .rawthoughts.html | cat - .foot.html > thoughts.html
 git add .
-git commit -m "add thoughts"
+git commit -m "update thoughts"
 git push
-echo "your thoughts have been shared :)"
+echo
+echo "your thoughts have been shared"

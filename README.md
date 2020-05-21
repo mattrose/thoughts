@@ -2,26 +2,24 @@
 [Check it out!](https://thoughts.maren.hup.is)
 
 ## How it works
-*thoughts is a work in progress! The installer is brittle and prone to requiring manual intervention. One day this will change, but until then just know that at least it's simple, and once it's working you shouldn't have to futz with it.*
+*thoughts is a work in progress!*
 
 * Type `thoughts` in a terminal
-* Your preferred editor opens. Type your thought and then save and quit
-* *thoughts* outputs a single, self-contained HTML document with your thought appended. The thought is timestamped and the timestamp is linkified.
-* *thoughts* pushes your updated `thoughts.html` to github. It's up to you to get it on a server.
+* Your preferred editor opens. Type your thought, then save and quit
+* *thoughts* outputs a single, self-contained HTML document with your thought added. The thought is timestamped and the timestamp is linkified.
+* *thoughts* pushes your updated `thoughts.html` to a remote git repository of your choosing. It's up to you to host it somewhere.
 
 ## Requirements
-* any POSIX shell
+* any POSIX shell (sh, dash, bash, ksh, zsh, and maybe others)
 * POSIX coreutils
 * Git
 
-*Note:  Portability is the primary priority. Please open an issue if you experience any incorrect behavior on your system.*
+*Note: Portability is the primary priority. Please open an issue if any shell code or coreutil invocations behave unexpectedly.*
 
 ## Installing
 *Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.*
 
-Install from anywhere in `~/` with `./install.sh`. The installer is brittle, but simple. If it's misbehaving, don't be afraid to peek at the source.
-
-*thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`. The installer doesn't handle this natively, but it's not too hard to set up.
+Install from anywhere in `$HOME/` with `./install.sh`.
 
 ### First install:
 *(Do this if you aren't already using thoughts on another computer)*
@@ -35,49 +33,37 @@ Install from anywhere in `~/` with `./install.sh`. The installer is brittle, but
   * `$ git push`
 * From anywhere, type `thoughts`
 
-### Installing on a second computer:
-* Install with `./install.sh`
-* `$ cd`
-* Clone the remote repo you've been using to store your thoughts
-* Copy all of its contents into `~/.local/share/thoughts`, overwriting any existing files with the same names
-* Use *thoughts* as usual
+*thoughts* can be installed on multiple computers, all updating the same remote `thoughts.html`.
 
-*A note about formatting your thoughts:*  
-Newlines are converted into `<br>` in all cases. So intentionally spaced out paragraphs are respected, but
-```
-if
-   you
-          type
-   this
-```
-```
-then
-you
-get
-this
-```
+### Installing on another computer:
+* Install with `./install.sh another`
+* Follow the prompts
+
+## Commands
+* `$ thoughts update`
+  * Download and install the latest tagged release
+* `$ thoughts edit`
+  * Edit your previously posted thoughts
+
+## Notes
+* Newlines are converted into `<br>` in all cases, so space your paragraphs as you wish!
+* *thoughts* is wrapping lots of git behavior. If a git thing is breaking, inspect the situation in `$HOME/.local/share/thoughts` (that's where all *thoughts* data lives)
 
 ## Future
-* Plans
-  * ~Use POSIX coreutils so it can run on Mac/BSD/etc.~
-    * Done!
-  * ~Use sh rather than bash~
-    * Done! Shell is sourced with `/usr/bin/env sh`
-  * ~Source editor from environment~
-    * Done! *thoughts* will use your preferred editor or fall back to `vi`
-  * Improve installer
-  * Add `thoughts update`
-* Hopes
-  * Automatically linkify URLs
-  * Support basic user congifuration in a `thoughts.conf`
-  * Add `thoughts help`
-* Dreams
-  * Support a small subset of markdown (without introducing new dependencies or writing a parser)
-    * Nested, unordered lists
-    * Single backticks for inline code
-    * Triple backtick codeblocks (no syntax highlighting)
-    * `**bold**`, `*italic*`, and `***bold italic***`
-  * Edit/delete previous thoughts
-  * Preview thoughts
+* ~Use POSIX coreutils so it can run on Mac/BSD/etc.~ Done!
+* ~Use sh rather than bash~ Done!
+* ~Source editor from environment~ Done!
+* ~Improve installer~ Done!
+* ~Add `thoughts update`~ Done!
+* Automatically linkify URLs
+* Support basic user configuration in a `thoughts.conf`
+* ~Add `thoughts help`~ Done!
+* Support a small subset of markdown
+  * Nested, unordered lists
+  * Single backticks for inline code
+  * Triple backtick codeblocks
+  * `**bold**`, `*italic*`, and `***bold italic***`
+* ~Edit/delete previous thoughts~ Done!
+* Preview thoughts
 
 <3
