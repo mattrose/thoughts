@@ -13,6 +13,7 @@ if [ "$cmd" = "update" ]; then
     cp "$stuffDir"/thoughts-temp/.foot.html "$stuffDir"
     cp "$stuffDir"/thoughts-temp/README.md "$stuffDir"
     cp "$stuffDir"/thoughts-temp/thoughts "$HOME"/.local/bin
+    chmod +x "$HOME"/.local/bin/thoughts
     rm -rf "$stuffDir"/thoughts-temp
     echo
     echo "Done!"
