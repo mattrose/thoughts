@@ -19,7 +19,7 @@
 ## Installing
 *Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.*
 
-Install from anywhere in `$HOME/` with `./install.sh`.
+Install from anywhere with `./install.sh`.
 
 ### First install:
 *(Do this if you aren't already using thoughts on another computer)*
