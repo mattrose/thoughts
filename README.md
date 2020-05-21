@@ -50,7 +50,8 @@ Install from anywhere with `./install.sh`.
 ## Notes
 * Newlines are converted into `<br>` in all cases, so space your paragraphs as you wish!
 * *thoughts* is wrapping lots of git behavior. If a git thing is breaking, inspect the situation in `$HOME/.local/share/thoughts` (that's where all *thoughts* data lives)
-* *thoughts* is currently pulling a font from a CDN ([xz/fonts](https://fonts.xz.style/), not Google). In the future, the will be off/on/type configurable. If you'd like to disable it before then, simply remove the `@import` from `.head.html`
+* *thoughts* is currently pulling a font from a CDN ([xz/fonts](https://fonts.xz.style/), not Google). In the future, this will be off/on/type configurable. If you'd like to disable it before then, simply remove the import from `.head.html`
+* If you post a thought that contains HTML, it will definitely render in the browser.
 
 ## Future
 * ~Use POSIX coreutils so it can run on Mac/BSD/etc.~ Done!
