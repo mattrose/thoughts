@@ -9,8 +9,11 @@ if [ "$cmd" = "update" ]; then
     tag=$(git tag -l | tail -1)
     git checkout tags/"$tag"
     cd ..
-    cp -r thoughts-temp/. "$HOME"/.local/share/thoughts
-    mv "$HOME"/.local/share/thoughts/thoughts "$HOME"/.local/bin
+    cp thoughts-temp/.head.html "$HOME"/.local/share/thoughts
+    cp thoughts-temp/.foot.html "$HOME"/.local/share/thoughts
+    cp thoughts-temp/README.md "$HOME"/.local/share/thoughts
+    cp thoughts-temp/thoughts "$HOME"/.local/bin
+    rm -rf thoughts-temp
     echo "Done."
     exit 0
 fi
