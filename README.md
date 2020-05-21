@@ -5,7 +5,7 @@
 *thoughts is a work in progress!*
 
 * Type `thoughts` in a terminal
-* Your preferred editor opens. Type your thought, then save and quit
+* Your preferred editor opens. Type your thought, then save and exit
 * *thoughts* outputs a single, self-contained HTML document with your thought added. The thought is timestamped and the timestamp is linkified.
 * *thoughts* pushes your updated `thoughts.html` to a remote git repository of your choosing. It's up to you to host it somewhere.
 
