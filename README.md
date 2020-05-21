@@ -44,6 +44,8 @@ Install from anywhere in `$HOME/` with `./install.sh`.
   * Download and install the latest tagged release
 * `$ thoughts edit`
   * Edit your previously posted thoughts
+* `$ thoughts help`
+  * Show some helpful information
 
 ## Notes
 * Newlines are converted into `<br>` in all cases, so space your paragraphs as you wish!
