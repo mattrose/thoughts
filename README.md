@@ -1,20 +1,21 @@
-# *thoughts* 
-[Check it out!](https://thoughts.maren.hup.is)
+# *thoughts*
+*thoughts* is a highly portable shell program for making short, tweet-like text posts from a terminal. *thoughts* adds these text posts to a self-contained HTML file, and keeps the file synced in a remote git repository of your choosing. It's up to you to host the file somewhere, but *thoughts* handles everything else. [Here's what it looks like](https://thoughts.maren.hup.is).
+
+### Requirements
+* any POSIX shell (sh, dash, bash, ksh, zsh, and maybe others)
+* POSIX coreutils
+* Git
+
+*Note: Portability is the primary priority. Please open an issue if any shell code or coreutil invocations behave unexpectedly.*
 
 ## How it works
+
 *thoughts is a work in progress!*
 
 * Type `thoughts` in a terminal and press `<enter>`
 * Your preferred editor opens. Type your thought, then save and exit
 * *thoughts* outputs a single, self-contained HTML file with your thought added. The thought is timestamped and the timestamp is linkified.
 * *thoughts* pushes your updated `thoughts.html` to a remote git repository of your choosing. It's up to you to host it somewhere.
-
-## Requirements
-* any POSIX shell (sh, dash, bash, ksh, zsh, and maybe others)
-* POSIX coreutils
-* Git
-
-*Note: Portability is the primary priority. Please open an issue if any shell code or coreutil invocations behave unexpectedly.*
 
 ## Installing
 *Download the most recent release from [here](https://github.com/marenbeam/thoughts/releases). `master` is used for development, and is sometimes broken.*
@@ -26,7 +27,7 @@ Install from anywhere with `./install.sh`.
 * Install with `./install.sh`
 * Add `~/.local/bin` to your PATH
 * Use `git init` to create a git repository in `~/.local/share/thoughts`, then point it at an empty remote origin
-* Be sure it's working:
+* Be sure the repo is set up properly:
   * `$ cd ~/.local/share/thoughts`
   * `$ git add .`
   * `$ git commit -m "init"`
@@ -51,7 +52,7 @@ Install from anywhere with `./install.sh`.
 * Newlines are converted into `<br>` in all cases, so space your paragraphs as you wish!
 * *thoughts* is wrapping lots of git behavior. If a git thing is breaking, inspect the situation in `$HOME/.local/share/thoughts` (that's where all *thoughts* data lives)
 * *thoughts* is currently pulling a font from a CDN ([xz/fonts](https://fonts.xz.style/), not Google). In the future, this will be off/on/type configurable. If you'd like to disable it before then, simply remove the import from `.head.html`
-* If you post a thought that contains HTML, it will definitely render in the browser.
+* If you post a thought that contains HTML, that HTML will definitely render in the browser.
 
 ## Future
 * ~Use POSIX coreutils so it can run on Mac/BSD/etc.~ Done!
